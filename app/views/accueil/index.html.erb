@@ -15,5 +15,15 @@
         </div>
 </nav>
 </br>
-<h1> CONTACT : </h1>
-<p> Team_Moussaillons@BlackPearl.pirate </p>
+
+<div class="container-fluid d-flex flex-wrap justify-content-center">
+    <% @gossips.each do |gossip| %>
+        <div class="card p-2 m-1" style="width: 22rem;">
+            <div class="card-body">
+                <p class="card-text"><%= gossip.user.first_name %></p>
+                <h5 class="card-title"><%= gossip.title %></h5>
+                <p class="card-text"><%= gossip.content %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
