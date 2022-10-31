@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   get '/welcome/:id', to: 'welcome#welcome'
   get '/welcome', to: 'welcome#welcome'
 
+  get '/user/:id', to: 'user#user'
+  get '/gossip/:id', to: 'gossip#gossip'
+  
+
 
 
 end

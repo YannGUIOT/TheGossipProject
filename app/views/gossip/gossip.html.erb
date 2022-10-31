@@ -1,0 +1,5 @@
+
+<p> Author : </p><h2><%= link_to @gossip.user.first_name, "/user/#{@gossip.user.id}" %> <%= link_to @gossip.user.last_name, "/user/#{@gossip.user.id}" %></h2> </br></br>
+<p> Title : </p><h2><%= @gossip.title %> </h2> </br></br>
+<p> Content : </p><h3><%= @gossip.content %> </h3></br></br>
+<p> Date : </p><h5><%= @gossip.created_at %> </h5>
