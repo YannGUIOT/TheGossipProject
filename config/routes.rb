@@ -3,18 +3,14 @@ Rails.application.routes.draw do
 
 
   # Defines the root path route ("/")
-  # root "articles#index"
 
-  # resources :gossips do 
-  #   resources :comments
-  #   resources :likes
-  # end
-  # resources :cities
-  # resources :users
-  # resources :sessions
 
-  root 'accueil#index'
-  get '/accueil', to: 'accueil#index'
+  resources :gossip
+  resources :users
+ 
+
+  root 'gossip#index'
+  #get '/accueil', to: 'accueil#index'
 
   get '/contact', to: 'contact#contact'
   get '/equipe', to: 'team#team'
@@ -22,8 +18,10 @@ Rails.application.routes.draw do
   get '/welcome/:id', to: 'welcome#welcome'
   get '/welcome', to: 'welcome#welcome'
 
-  get '/user/:id', to: 'user#user'
-  get '/gossip/:id', to: 'gossip#gossip'
+  # get '/user/:id', to: 'user#user'
+  # get '/gossip/:id', to: 'gossip#gossip'
+
+  # get '/new', to: 'gossip#new'
   
 
 
